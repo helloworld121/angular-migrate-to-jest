@@ -1,16 +1,26 @@
-import { TestBed } from '@angular/core/testing';
-
 import { RomanNumberService } from './roman-number.service';
 
 describe('RomanNumberService', () => {
-  let service: RomanNumberService;
 
+  // sut = system under test (example)
+  let sut: RomanNumberService;
+
+  // each test should have a clear and new instance
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(RomanNumberService);
+    sut = new RomanNumberService();
   });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
+  describe('transform', () => {
+    test('should return I for 1', () => {
+      // Arrage
+      const value = 1;
+
+      // Act
+      const result = sut.transform(value);
+
+      // Assert
+      expect(result).toBe('I');
+    });
   });
+
 });
