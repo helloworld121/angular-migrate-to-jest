@@ -2,6 +2,13 @@ import { RomanNumberPipe } from './roman-number.pipe';
 import {RomanNumberService} from './roman-number.service';
 import {instance, mock, verify, when} from 'ts-mockito';
 
+
+// Unit Tests
+// AAA Pattern + MOCKS
+// 1) Arrange Setup (Setup Mocks)
+// 2) Act
+// 3) Assert Verify (Verify Mocks, if they were called)
+
 describe('RomanNumberPipe', () => {
 
   let sut: RomanNumberPipe;
