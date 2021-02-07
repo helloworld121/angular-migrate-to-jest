@@ -21,6 +21,18 @@ describe('RomanNumberService', () => {
       // Assert
       expect(result).toBe('I');
     });
+
+    test('should return II for 2', () => {
+      // Arrage
+      const value = 2;
+
+      // Act
+      const result = sut.transform(value);
+
+      // Assert
+      expect(result).toBe('II');
+    });
+
   });
 
 });

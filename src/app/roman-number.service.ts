@@ -8,7 +8,7 @@ export class RomanNumberService {
   constructor() { }
 
   transform(value: number): string {
-    return 'I';
+    return [...Array(value)].map(_ => 'I').join('');
   }
 
 }
